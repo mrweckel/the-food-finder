@@ -41,8 +41,12 @@ get '/restaurant/:id' do |id|
 end
 
 post '/comments/new' do
-
-    redirect to('/home')
+  comment = Comment.new(params[:comment])
+  if comment.save
+    redirect to("/restaurant/#{comment.restaurant.id}")
+  else
+    redirect to("/restaurant/#{comment.restaurant.id}")
+  end
 end
 
 get '/logout' do

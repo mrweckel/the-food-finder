@@ -2,9 +2,14 @@
 <h3><%= @restaurant.rating %></h3>
 
 <form action='/comments/new' method="post">
-  <textarea name="comment" placeholder="enter comment"></textarea><br>
+  <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
+  <textarea name="comment[text]" placeholder="enter comment"></textarea><br>
   <input type="submit" value="leave comment">
 </form>
+
+  <% @restaurant.comments.each do |comment| %>
+    <%= comment.text %><br>
+  <% end %>
 
   <ol>
     <% @restaurant.customers.each do |cust| %>

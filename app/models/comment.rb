@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
   belongs_to :user
-
-  validates: :text, presence: true
+  belongs_to :restaurant
+  validates :text, presence: true
 end
