@@ -1,0 +1,6 @@
+<h1>Welcome, <%= @user.name %></h1>
+<ol>
+  <% @restaurants.each do |rest| %>
+    <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %><%= rest.rating%></a></li>
+  <% end %>
+</ol>
