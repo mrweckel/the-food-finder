@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   has_many :comments
 
   validates :email, uniqueness: true
+  validates :name, presence: true
 end
