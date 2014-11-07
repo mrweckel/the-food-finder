@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-=======
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
->>>>>>> origin/baron
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
   <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -18,12 +17,12 @@
   <link href="css/foodie.css" rel="stylesheet">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
 <body>
-<<<<<<< HEAD
   <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,12 +54,10 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-=======
   <% if session[:user_id]%>
   <a href="/home">home</a>
   <a href="/logout">logout</a>
   <% end %>
->>>>>>> origin/baron
   <%= yield %>
 </body>
 </html>

@@ -3,12 +3,21 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-Weckel additions
 
-.navbar-new {
-    background-color: #1978B4;
-    border-color: transparent;
+/*Weckel additions*/
+html, body{
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
 }
+
+#map-canvas {
+    height: 50%;
+    width: 50%;
+}
+
+/*end*/
 
 body {
     overflow-x: hidden;
