@@ -3,7 +3,7 @@ get '/' do
 end
 
 post '/login' do
-  user = User.find_by(email: params[:email]).try(:authenticate, params[:password])
+  user = User.find_by(email: params[:email])
 
     if user
       session[:user_id] = user.id
@@ -40,9 +40,19 @@ get '/restaurant/:id' do |id|
 end
 
 post '/comments/new' do
-
-    redirect to('/home')
+  comment = Comment.new(params[:comment])
+  if comment.save
+    redirect to("/restaurant/#{comment.restaurant.id}")
+  else
+    redirect to("/restaurant/#{comment.restaurant.id}")
+  end
 end
+
+get '/user/:id' do |id|
+  user = User.find(id)
+  erb :profile_single
+end
+
 
 get '/logout' do
   session[:user_id] = nil

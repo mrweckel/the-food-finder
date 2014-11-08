@@ -1,15 +1,21 @@
-<h1><%= @restaurant.name %></h1>
-<h3><%= @restaurant.rating %></h3>
+<div>
+  <h1><%= @restaurant.name %></h1>
+</div>
 
 <form action='/comments/new' method="post">
-  <textarea name="comment" placeholder="enter comment"></textarea><br>
+  <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
+  <textarea name="comment[text]" placeholder="enter comment"></textarea><br>
   <input type="submit" value="leave comment">
 </form>
 
-  <ol>
-    <% @restaurant.customers.each do |cust| %>
-    <div class="customers">
-    <li><%= cust.name %></li>
-    <% end %>
-  </ol>
+  <% @restaurant.comments.each do |comment| %>
+    <%= comment.text %><br>
+  <% end %>
 
+
+
+
+<% customer_names = @restaurant.customers.uniq %>
+    <% customer_names.each do |cust| %>
+      <%= cust.name %>
+    <% end %>
