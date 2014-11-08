@@ -32,7 +32,7 @@
 
        .login-popup {
            display: none;
-           background: #333;
+           background: #293341;
            padding: 10px;
            border: 2px solid #ddd;
            float: left;
@@ -41,13 +41,13 @@
            top: 50%;
            left: 50%;
            z-index: 99999;
-           box-shadow: 0px 0px 20px #999;
+           box-shadow: 0px 0px 5px 2px #000;
            /* CSS3 */
 
-           -moz-box-shadow: 0px 0px 20px #999;
+           -moz-box-shadow: 0px 0px 5px 2px #000;
            /* Firefox */
 
-           -webkit-box-shadow: 0px 0px 20px #999;
+           -webkit-box-shadow: 0px 0px 5px 2px #000;
            /* Safari, Chrome */
 
            border-radius: 3px 3px 3px 3px;
@@ -60,8 +60,11 @@
            ;
        }
        img.btn_close {
-           Position the close button float: right;
+           /*Position the close button */
+           float: right;
            margin: -28px -28px 0 0;
+           height: 50%;
+           width: 50%;
        }
        fieldset {
            border: none;
