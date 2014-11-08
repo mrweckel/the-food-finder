@@ -7,8 +7,17 @@
 
 <h1><%= @user.name%>'s Profile</h1>
 
+
+
+<% customer_restaurants = @user.restaurants.uniq %>
 <ol>
-  <% @user.restaurants.each do |rest| %>
-    <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a></li>
+  <% customer_restaurants.each do |rest| %>
+    <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
+      <ol>
+        <% rest.comments.each do |comment|%>
+          <li><%= comment.text %></li>
+        <% end %>
+      </ol>
+    </li>
   <% end %>
 </ol>

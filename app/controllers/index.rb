@@ -4,7 +4,6 @@ end
 
 post '/login' do
   user = User.find_by(email: params[:email])
-
     if user
       session[:user_id] = user.id
       redirect to('/home')
@@ -56,6 +55,11 @@ end
 get '/profile/:id' do |id|
   @user = User.find(id)
   erb :profile_single
+end
+
+get '/profiles/all' do
+  @users = User.all
+  erb :profile_all
 end
 
 

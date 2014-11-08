@@ -26,6 +26,8 @@
   <% if session[:user_id]%>
   <a href="/home">home</a>
   <a href="/logout">logout</a>
+  <% else %>
+  <p> "you're not signed in" </p>
   <% end %>
   <%= yield %>
 </body>
