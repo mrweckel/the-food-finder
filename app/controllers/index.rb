@@ -48,6 +48,12 @@ post '/comments/new' do
   end
 end
 
+get '/user/:id' do |id|
+  user = User.find(id)
+  erb :profile_single
+end
+
+
 get '/logout' do
   session[:user_id] = nil
   redirect to('/')

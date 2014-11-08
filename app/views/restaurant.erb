@@ -1,6 +1,5 @@
 <div>
-<h1><%= @restaurant.name %></h1>
-<h3><%= @restaurant.rating %></h3>
+  <h1><%= @restaurant.name %></h1>
 </div>
 
 <form action='/comments/new' method="post">
@@ -14,8 +13,9 @@
   <% end %>
 
 
-    <% @restaurant.customers.each do |cust| %>
+
+
+<% customer_names = @restaurant.customers.uniq %>
+    <% customer_names.each do |cust| %>
       <%= cust.name %>
     <% end %>
-
-
