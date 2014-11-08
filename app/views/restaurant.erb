@@ -1,21 +1,42 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <div>
   <h1><%= @restaurant.name %></h1>
 </div>
 
 <form action='/comments/new' method="post">
   <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
+  <input type="hidden" name="comment[user_id]" value="<%= session[:user_id]%>">
   <textarea name="comment[text]" placeholder="enter comment"></textarea><br>
   <input type="submit" value="leave comment">
 </form>
 
+<br>
+<br>
+
+<div id="comments">
   <% @restaurant.comments.each do |comment| %>
     <%= comment.text %><br>
+    commented by: <a href="/profile/<%= session[:user_id]%>">
+    <%= comment.user.name%></a><br>
   <% end %>
+</div>
+<br>
+<br>
 
-
-
-
-<% customer_names = @restaurant.customers.uniq %>
+<div id="previous_diners">
+People who have eaten here before:
+<ol>
+  <% customer_names = @restaurant.customers.uniq %>
     <% customer_names.each do |cust| %>
-      <%= cust.name %>
+      <li><a href="/profile/<%= cust.id%>"><%= cust.name %></a></li>
     <% end %>
+</ol>
+</div>
