@@ -3,12 +3,11 @@
 <br>
 <br>
 <br>
-<br>
 
-<h1><%= @user.name%>'s Profile</h1>
+<h1>All Restaurants</h1>
 
 <ol>
-  <% @user.restaurants.each do |rest| %>
+  <% @restaurants.each do |rest| %>
     <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a></li>
   <% end %>
 </ol>

@@ -34,9 +34,14 @@ get '/home' do
   erb :home
 end
 
+get '/restaurants/all' do
+  @restaurants = Restaurant.all
+  erb :restaurants_all
+end
+
 get '/restaurant/:id' do |id|
   @restaurant = Restaurant.find(id)
-  erb :restaurant
+  erb :restaurant_single
 end
 
 post '/comments/new' do
@@ -48,8 +53,8 @@ post '/comments/new' do
   end
 end
 
-get '/user/:id' do |id|
-  user = User.find(id)
+get '/profile/:id' do |id|
+  @user = User.find(id)
   erb :profile_single
 end
 
