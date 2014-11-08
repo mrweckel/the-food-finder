@@ -1,5 +1,7 @@
+<div>
 <h1><%= @restaurant.name %></h1>
 <h3><%= @restaurant.rating %></h3>
+</div>
 
 <form action='/comments/new' method="post">
   <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
@@ -11,10 +13,9 @@
     <%= comment.text %><br>
   <% end %>
 
-  <ol>
+
     <% @restaurant.customers.each do |cust| %>
-    <div class="customers">
-    <li><%= cust.name %></li>
+      <%= cust.name %>
     <% end %>
-  </ol>
+
 

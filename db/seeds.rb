@@ -4,7 +4,24 @@ User.create(name: "Baron", email: "emoney88@gmail.com", password_digest: "123")
 User.create(name: "Matt", email: "emoney89@gmail.com", password_digest: "123")
 
 
-Restaurant.create(name: "Chipotle")
-Restaurant.create(name: "Mellow Mushroom")
-Restaurant.create(name: "Popeyes")
-Restaurant.create(name: "In-n-Out")
+
+Yelp.client.configure do |config|
+  config.consumer_key = "aq8qpHMvqAgPVNXWnjqMkg"
+  config.consumer_secret = "GMViPfhWCkLmZYIhdtL7gHdc8R8"
+  config.token = "0E3aqR5Kgja_fG3qkuQBG7319sslYohw"
+  config.token_secret = "9Byu3qnmpbi92pOe7BEcaMoPyOU"
+end
+
+response = Yelp.client.search('48 Wall St, New York, NY', { term: 'food', sort: 1, radius_filter: 800 })
+
+names = response.businesses
+
+names.each do |name|
+  Restaurant.create(name: name.name)
+end
+
+rating_array=[1,2,3,4,5]
+
+50.times do
+  Rating.create(user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id, rating: rating_array.sample)
+end
