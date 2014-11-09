@@ -876,7 +876,7 @@ img {
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     display: block;
     width: 100% \9;
-    max-width: 100%;
+    max-width: 50%;
     height: auto
 }
 .img-rounded {
@@ -3490,7 +3490,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
     }
 }
 .navbar-default {
-    background-color: #1978B4;
+    background-color: #e05b49;
     border-color: transparent
 }
 .navbar-default .navbar-brand {
