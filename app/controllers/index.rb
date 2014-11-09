@@ -29,6 +29,7 @@ end
 
 get '/home' do
   @user = User.find(session[:user_id])
+
   @restaurants = Restaurant.all
   erb :home
 end
