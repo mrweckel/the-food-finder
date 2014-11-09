@@ -59,6 +59,7 @@ end
 
 get '/profiles/all' do
   @users = User.all
+  @url = Gravatar.new("generic@example.com").image_url
   erb :profile_all
 end
 
