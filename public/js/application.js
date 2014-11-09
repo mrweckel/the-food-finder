@@ -5,7 +5,9 @@ $(document).ready(function() {
 
     function initialize() {
       var dbc = new google.maps.LatLng(40.706426, -74.009007);
-      var dest = 'Mad Dog'
+      var dest = $('h1').html();
+      console.log(dest)
+      // var dest = 'Mad Dog'
       var mapOptions = {
         zoom: 15,
         center: dbc
@@ -14,7 +16,7 @@ $(document).ready(function() {
 
       map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-      var image = 'dbc.png'
+      var image = '../dbc.png'
       var marker = new google.maps.Marker({
         position: dbc,
         map: map,

@@ -11,6 +11,8 @@
   <h1><%= @restaurant.name %></h1>
 </div>
 
+<div id="map-canvas"></div>
+
 <form action='/comments/new' method="post">
   <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
   <input type="hidden" name="comment[user_id]" value="<%= session[:user_id]%>">

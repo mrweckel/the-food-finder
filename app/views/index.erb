@@ -13,11 +13,14 @@
   </div>
 </header>
 
-<a href="#login-box" class="login-window">Login</a>
-<a href="/signup">signup</a>
+<% if current_user %>
+  <a href="/logout">Logout</a>
+<% else %>
+  <a href="#login-box" class="login-window">Login</a> | <a href="/signup">Signup</a>
+<% end %>
 
 <%= erb :_login_form %>
-<div id="map-canvas"></div>
+
 
 
 
