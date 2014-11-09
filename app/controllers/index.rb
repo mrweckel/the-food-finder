@@ -67,3 +67,6 @@ get '/logout' do
   session[:user_id] = nil
   redirect to('/')
 end
+
+post '/rating' do
+end
