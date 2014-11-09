@@ -2,6 +2,6 @@ class Rating < ActiveRecord::Base
   belongs_to :user
   belongs_to :restaurant
 
-  # validates_numericality_of :rating, :in => 1..5
+  validates :rating, :inclusion => {:in => 0..5}
 
 end
