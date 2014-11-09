@@ -4,7 +4,6 @@ end
 
 post '/login' do
   user = User.find_by(email: params[:email])
-
     if user
       session[:user_id] = user.id
       redirect to('/home')
@@ -34,9 +33,14 @@ get '/home' do
   erb :home
 end
 
+get '/restaurants/all' do
+  @restaurants = Restaurant.all
+  erb :restaurants_all
+end
+
 get '/restaurant/:id' do |id|
   @restaurant = Restaurant.find(id)
-  erb :restaurant
+  erb :restaurant_single
 end
 
 post '/comments/new' do
@@ -48,9 +52,14 @@ post '/comments/new' do
   end
 end
 
-get '/user/:id' do |id|
-  user = User.find(id)
+get '/profile/:id' do |id|
+  @user = User.find(id)
   erb :profile_single
+end
+
+get '/profiles/all' do
+  @users = User.all
+  erb :profile_all
 end
 
 
