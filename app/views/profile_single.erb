@@ -5,14 +5,19 @@
 <br>
 <br>
 
-<h1><%= @user.name%>'s Profile</h1>
+<div class="single-profile">
 
+<h1><%= @user.name%>'s Profile</h1>
 
 
 <% customer_restaurants = @user.restaurants.uniq %>
 <ol>
   <% customer_restaurants.each do |rest| %>
     <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
+      <ul class="user-rating">
+        <% user_id = @user.id %>
+        <li>My Rating: <%= rest.ratings.find_by(user_id: user_id).rating %></li>
+      </ul>
       <ol>
         <% rest.comments.each do |comment|%>
           <li><%= comment.text %></li>
@@ -21,3 +26,4 @@
     </li>
   <% end %>
 </ol>
+</div>

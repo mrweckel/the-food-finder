@@ -5,14 +5,15 @@
 <br>
 <br>
 
-
+<div class="home-page">
 <h1>Welcome, <%= @user.name %></h1>
 
 
 
-
+<p> All Restaurants</p>
 <ol>
   <% @restaurants.each do |rest| %>
-    <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %><%= average_rating(rest)%></a></li>
+    <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %> |  <%= average_rating(rest)%></a></li>
   <% end %>
 </ol>
+</div>
