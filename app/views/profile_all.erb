@@ -4,11 +4,20 @@
 <br>
 <br>
 <br>
+<div class="col-md-3">
+</div>
+<div class="col-md-6"
+<span>
 
-<h1>All Students</h1>
 
-<ol>
   <% @users.each do |user| %>
-    <li><a href="/profile/<%= user.id%>"><%= user.name %></a></li>
+  <div class ="profiles">
+    <img src = "<%=Gravatar.new(user.email).image_url%>"><br>
+    <a href="/profile/<%= user.id%>"><%= user.name %></a><br>
+  </div>
   <% end %>
-</ol>
+</span>
+</div>
+<div class="col-md-3">
+  </div>
+</header>

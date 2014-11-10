@@ -20,6 +20,7 @@ gem 'shotgun'
 gem 'bcrypt'
 gem 'pry'
 gem 'yelp'
+gem 'gravatar-ultimate'
 
 group :test do
   gem 'faker'

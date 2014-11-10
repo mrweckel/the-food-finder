@@ -6,7 +6,7 @@ post '/login' do
   user = User.find_by(email: params[:email])
     if user
       session[:user_id] = user.id
-      redirect to('/home')
+      redirect to('/profiles/all')
     else
       redirect to '/'
     end
@@ -21,7 +21,7 @@ post '/signup' do
 
   if user.save
     session[:user_id] = user.id
-    redirect to('/home')
+    redirect to('/profiles/all')
   else
     redirect to('/signup')
   end
@@ -29,6 +29,7 @@ end
 
 get '/home' do
   @user = User.find(session[:user_id])
+
   @restaurants = Restaurant.all
   erb :home
 end
@@ -59,6 +60,7 @@ end
 
 get '/profiles/all' do
   @users = User.all
+  @url = Gravatar.new("generic@example.com").image_url
   erb :profile_all
 end
 

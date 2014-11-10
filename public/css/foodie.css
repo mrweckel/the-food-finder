@@ -5,6 +5,44 @@
          */
 
         /*Weckel additions*/
+
+        #restaurants{
+          margin-top: 20px;
+        }
+
+        .body-color{
+          #1fa4b6;
+        }
+
+        .profiles{
+          padding: 20px;
+          position: relative;
+          float: left;
+          border: 1px black solid;
+          margin: 0px 50px 20px 0;
+          box-shadow: 0px 0px 5px 2px #000;
+           /* CSS3 */
+
+          -moz-box-shadow: 0px 0px 5px 2px #000;
+           /* Firefox */
+
+          -webkit-box-shadow: 0px 0px 5px 2px #000;
+          /* Safari, Chrome */
+          border-radius: 3px 3px 3px 3px;
+          -moz-border-radius: 3px;
+          /* Firefox */
+          -webkit-border-radius: 3px;
+           /* Safari, Chrome */
+        }
+
+        .user-buttons{
+          font-size: 1.5em
+        }
+
+        #intro-id{
+          margin-top: -30px;
+        }
+
         html, body{
                 height: 100%;
                 width: 100%;
@@ -161,7 +199,7 @@
 
         hr.star-light,
         hr.star-primary {
-            margin: 25px auto 30px;
+            margin: 50px auto 30px;
             padding: 0;
             max-width: 250px;
             border: 0;
@@ -205,7 +243,8 @@
         header {
             text-align: center;
             color: #fff;
-            background: #D3D3C9;
+            background: #1fa4b6;
+            margin-top: -125px;
         }
 
         header .container {

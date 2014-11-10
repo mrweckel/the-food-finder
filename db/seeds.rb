@@ -1,7 +1,15 @@
 User.create(name: "Edwin", email: "emoney86@gmail.com", password_digest: "123")
-User.create(name: "AJ", email: "emoney87@gmail.com", password_digest: "123")
-User.create(name: "Baron", email: "emoney88@gmail.com", password_digest: "123")
-User.create(name: "Matt", email: "emoney89@gmail.com", password_digest: "123")
+User.create(name: "AJ", email: "identity_unveiled@hotmail.com", password_digest: "123")
+User.create(name: "Baron", email: "baron.willeford@gmail.com", password_digest: "123")
+User.create(name: "Matt", email: "mrweckel@gmail.com", password_digest: "123")
+User.create(name: "Courtney", email: "cnilan@gmail.com", password_digest: "123")
+User.create(name: "Ed", email: "edchen001@gmail.com", password_digest: "123")
+User.create(name: "James", email: "jhwang90@gmail.com", password_digest: "123")
+User.create(name: "Jensen", email: "jensen.bouzi@gmail.com", password_digest: "123")
+User.create(name: "Mark", email: "markdmcq@gmail.com", password_digest: "123")
+User.create(name: "Rob", email: "rob.yang@gmail.com", password_digest: "123")
+User.create(name: "Viktor", email: "vnikiten01@gmail.com", password_digest: "123")
+User.create(name: "Xiran", email: "xiranou@gmail.com", password_digest: "123")
 
 
 Yelp.client.configure do |config|
@@ -21,6 +29,6 @@ end
 
 rating_array=[1,2,3,4,5]
 
-50.times do
+100.times do
   Rating.create(user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id, rating: rating_array.sample)
 end
