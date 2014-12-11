@@ -4,17 +4,16 @@
 <br>
 <br>
 
-<div class="col-md-2">
-</div>
+<div class="col-md-2"></div>
+
 <div class="col-md-8" id="restaurants">
   <% @restaurants.each do |rest| %>
-  <div class ="profiles">
-    <img src = "<%=rest.picture%>"><br>
-    <a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
-  </div>
+  	<div class ="profiles">
+    	<img src = "<%=rest.picture%>"><br>
+    	<a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
+  	</div>
   <% end %>
-
 </div>
-<div class="col-md-2">
-  </div>
+
+<div class="col-md-2"></div>
 

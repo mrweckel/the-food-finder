@@ -6,11 +6,9 @@
 <br>
 
 <div class="single-profile">
-
 <h1><%= @user.name%>'s Profile</h1>
-
-
 <% customer_restaurants = @user.restaurants.uniq %>
+
 <ol>
   <% customer_restaurants.each do |rest| %>
     <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>

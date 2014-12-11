@@ -23,12 +23,14 @@
 </head>
 <body>
   <%= erb :_nav %>
+
   <% if session[:user_id]%>
-  <a href="/home">home</a>
-  <a href="/logout">logout</a>
+    <a href="/home">home</a>
+    <a href="/logout">logout</a>
   <% else %>
-  <p> "you're not signed in" </p>
+    <p> "you're not signed in" </p>
   <% end %>
+
   <%= yield %>
 </body>
 </html>

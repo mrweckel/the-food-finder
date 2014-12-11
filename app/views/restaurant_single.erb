@@ -10,7 +10,6 @@
     <img src='<%= @restaurant.picture %>' width="145em" height="145em" class="rest-img">
     <div>
       <h1 class="restaurant-name"><%= @restaurant.name %></h1>
-
       <p class="rest-rating">Rating: <%= average_rating(@restaurant)%></p>
     </div>
   </div>
@@ -34,18 +33,17 @@
   <div id="comments">
     <p>
     <% @restaurant.comments.each do |comment| %>
-      <%= comment.text %><br><span class="comment-author">    <br><%=comment.created_at.strftime("%b %d, %Y") %> | commented by: <a href="/profile/<%= session[:user_id]%>">
-      <%= comment.user.name%></a>
-
-    </span><br>
+      <%= comment.text %><br>
+      <span class="comment-author"></br>
+        <%=comment.created_at.strftime("%b %d, %Y") %> | commented by:
+        <a href="/profile/<%= session[:user_id]%>"><%= comment.user.name%></a>
+      </span><br>
     <% end %>
     </p>
   </div>
 
   <br>
-
   <%= erb :_ratings %>
-
   <br>
 
   <div id="previous_diners">
@@ -57,4 +55,3 @@
         <% end %>
     </ol>
   </div>
-<!-- </div> -->
