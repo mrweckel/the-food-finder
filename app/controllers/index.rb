@@ -71,4 +71,5 @@ get '/logout' do
 end
 
 post '/rating' do
+  redirect to('/restaurants/all')
 end
