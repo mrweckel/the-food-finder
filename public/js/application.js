@@ -6,7 +6,6 @@ $(document).ready(function() {
     function initialize() {
       var dbc = new google.maps.LatLng(40.706426, -74.009007);
       var dest = $('h1').html();
-      console.log(dest)
       // var dest = 'Mad Dog'
       var mapOptions = {
         zoom: 15,
@@ -63,7 +62,7 @@ $(document).ready(function() {
 
   //login//
   $('a.login-window').click(function() {
-
+    $('#signup-box').fadeOut(200);
             //Getting the variable's value from a link
     var loginBox = $(this).attr('href');
 
@@ -87,12 +86,38 @@ $(document).ready(function() {
     });
 
     // When clicking on the button close or the mask layer the popup closed
-    $('a.close, #mask').live('click', function() {
-      $('#mask , .login-popup').fadeOut(300 , function() {
-        $('#mask').remove();
-    });
-    return false;
-  });
+  //   $('a.close, #mask').live('click', function() {
+  //     $('#mask , .login-popup').fadeOut(300 , function() {
+  //       $('#mask').remove();
+  //   });
+  //   return false;
+  // });
   //login//
+
+  //signup//
+  $('a.signup-window').click(function() {
+    $('#login-box').fadeOut(200);
+            //Getting the variable's value from a link
+
+    var signupBox = $(this).attr('href');
+
+    //Fade in the Popup
+    $(signupBox).fadeIn(300);
+
+    //Set the center alignment padding + border see css style
+    var popMargTop = ($(signupBox).height() + 24) / 2;
+    var popMargLeft = ($(signupBox).width() + 24) / 2;
+
+    $(signupBox).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    // Add the mask to body
+    $('body').append('<div id="mask"></div>');
+    $('#mask').fadeIn(300);
+
+    return false;
+    });
 
 });

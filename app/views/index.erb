@@ -11,7 +11,8 @@
          <span class="user-buttons btn btn-success"><a href="/logout">Logout</a></span>
        <% else %>
          <a href="#login-box" class="login-window"><span class="user-buttons btn btn-success">Login</span></a>
-         <a href="/signup"><span class="user-buttons btn btn-success">Signup</span></a>
+
+         <a href="#signup-box" class="signup-window"><span class="user-buttons btn btn-success">Signup</span></a>
        <% end %>
       </div>
     </div>
@@ -22,6 +23,7 @@
 
 
 <%= erb :_login_form %>
+<%= erb :_signup_form %>
 
 
 
