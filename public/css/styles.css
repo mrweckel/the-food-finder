@@ -108,6 +108,40 @@ form.signin input::-webkit-input-placeholder {
 .button.submit.btn{
 
 }
+#restaurants {
+    margin-top: 20px;
+}
+.body-color {
+    #1fa4b6;
+}
+.profiles {
+    padding: 20px;
+    position: relative;
+    float: left;
+    border: 1px black solid;
+    margin: 0px 50px 20px 0;
+    background: #fff;
+}
+
+#profile-container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+a.prof-link{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.user-buttons {
+    font-size: 1.5em
+}
+#intro-id {
+    margin-top: -30px;
+}
 /*end*/
 
 body {
@@ -233,6 +267,7 @@ header .intro-text .skills {
         font-size: 1.5em;
     }
 }
+
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -564,37 +599,3 @@ footer .footer-below {
     /*margin-bottom: 200px;*/
 }
 
-#restaurants {
-    margin-top: 20px;
-}
-.body-color {
-    #1fa4b6;
-}
-.profiles {
-    padding: 20px;
-    position: relative;
-    float: left;
-    border: 1px black solid;
-    margin: 0px 50px 20px 0;
-    background: #fff;
-}
-
-#profile-container{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5%;
-}
-
-a.prof-link{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
-}
-
-.user-buttons {
-    font-size: 1.5em
-}
-#intro-id {
-    margin-top: -30px;
-}
