@@ -8,9 +8,10 @@
        <span class="skills">Find the best (and cheapest) food in the hood</span>
        <hr class="star-light">
        <% if current_user %>
-         <span class="user-buttons"><a href="/logout">Logout</a></span>
+         <span class="user-buttons btn btn-success"><a href="/logout">Logout</a></span>
        <% else %>
-         <span class="user-buttons"><a href="#login-box" class="login-window">Login</a></span> | <span class="user-buttons"><a href="/signup">Signup</a></span>
+         <a href="#login-box" class="login-window"><span class="user-buttons btn btn-success">Login</span></a>
+         <a href="/signup"><span class="user-buttons btn btn-success">Signup</span></a>
        <% end %>
       </div>
     </div>
