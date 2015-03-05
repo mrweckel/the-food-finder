@@ -125,7 +125,35 @@ form.signin input::-webkit-input-placeholder {
 }
 
 .single-profile{
+  background: #fff;
+  margin-top: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
 
+.single-profile img{
+  position: relative;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 2px black solid;
+  border-radius: 50%;
+  width: 150px;
+}
+
+.single-profile h1{
+  text-align: center;
+  padding: 20px;
+}
+
+.rest-list{
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.rest-list li{
+  margin-left: 12.5%;
 }
 
 #rest-container{

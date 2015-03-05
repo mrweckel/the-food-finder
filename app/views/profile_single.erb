@@ -1,15 +1,9 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="single-profile">
+<div class="single-profile col-sm-4 col-sm-offset-4">
+<img src = "<%=Gravatar.new(@user.email).image_url%>"><br>
 <h1><%= @user.name%>'s Profile</h1>
 <% customer_restaurants = @user.restaurants.uniq %>
 
-<ol>
+<ol class= "well rest-list">
   <% customer_restaurants.each do |rest| %>
     <li><a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
       <ul class="user-rating">
