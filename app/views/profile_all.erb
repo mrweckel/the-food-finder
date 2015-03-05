@@ -1,15 +1,10 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<div class="col-md-3">
-</div>
+<div id="profile-container" class="col-sm-6 col-sm-offset-3">
   <% @users.each do |user| %>
   	<div class ="profiles">
     	<img src = "<%=Gravatar.new(user.email).image_url%>"><br>
-    	<a href="/profile/<%= user.id%>"><%= user.name %></a><br>
+    	<a class="prof-link" href="/profile/<%= user.id%>"><%= user.name %></a><br>
   	</div>
   <% end %>
+</div>
+<div class="col-sm-3"></div>

@@ -96,8 +96,8 @@ $(document).ready(function() {
 
   //signup//
   $('a.signup-window').click(function() {
+
     $('#login-box').fadeOut(200);
-            //Getting the variable's value from a link
 
     var signupBox = $(this).attr('href');
 
