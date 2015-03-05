@@ -21,8 +21,8 @@ gem 'bcrypt'
 gem 'pry'
 gem 'yelp'
 gem 'gravatar-ultimate'
+gem 'rspec'
 
 group :test do
   gem 'faker'
-  gem 'rspec'
 end
