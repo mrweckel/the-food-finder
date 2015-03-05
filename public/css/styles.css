@@ -110,7 +110,7 @@ form.signin input::-webkit-input-placeholder {
     #1fa4b6;
 }
 .profiles {
-    padding: 20px;
+    padding: 10px;
     position: relative;
     float: left;
     border: 1px black solid;
@@ -118,6 +118,19 @@ form.signin input::-webkit-input-placeholder {
     margin: 0px 50px 20px 0;
     background: #fff;
 }
+
+#profile-list{
+  text-align: center;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-37%,0);
+  margin-bottom: 20px;
+}
+
+/*ul li.profiles:nth-child(3n){
+    padding:0;
+}*/
 
 .profiles img{
   border: 2px black solid;
@@ -158,11 +171,13 @@ form.signin input::-webkit-input-placeholder {
 
 #rest-container{
   margin-top: 120px;
+  border: 4px #EE745A solid;
 }
 
 #rest-container ul{
   position: relative;
   left: 50%;
+  margin-top: 30px;
   transform: translate(-37%,0);
 }
 
@@ -370,21 +385,35 @@ section.success {
 }
 
 
-/*Restaurant single page*/
-#map-canvas{
-  width: 100%;
-  height: 300px;
-  margin-top: 150px;
+.page-container.prof{
+  background: url("../img/sos.png");
+  border: 4px #EE745A solid;
+  margin-top: 120px;
+  margin-bottom: 20px;
 }
 
-.single-restaurant-container{
-  background: #fff;
+.page-container.rest{
+  background: url("../img/sos.png");
+  border: 4px #EE745A solid;
+  margin: 120px 100px;
 }
+
+
+/*Restaurant single page*/
+#map-canvas{
+  width: 90%;
+  height: 300px;
+  margin-top: 20px;
+}
+
 
 .restaurant-header.well{
   border: 2px black solid;
   border-radius: 5px;
   margin-top: 25px;
+  background: #fff;
+  width: 50%;
+  margin: 25px auto;
 }
 
 .restaurant-header img{
@@ -411,4 +440,9 @@ section.success {
 
 #previous_diners ul.list-unstyled.list-inline li{
   margin-top: 20px;
+}
+
+.custom-sidebar{
+  background: url("../img/p1.png");
+  height: 100vh;
 }

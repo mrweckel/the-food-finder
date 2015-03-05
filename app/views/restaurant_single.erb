@@ -1,7 +1,10 @@
-<div class="container single-restaurant-container">
+<div class="page-container rest">
   <div id="map-canvas"></div>
-<div class="restaurant-header col-sm-8 col-sm-offset-2 well">
+
+  <div class="restaurant-header well">
+
     <img src='<%= @restaurant.picture %>' width="145em" height="145em" class="rest-img">
+
     <div>
       <h1 class="restaurant-name"><%= @restaurant.name %></h1>
       <p class="rest-rating">Rating: <%= average_rating(@restaurant)%></p>
@@ -37,5 +40,5 @@
         <% end %>
     </ul>
   </div>
-  </div>
+
 </div>
