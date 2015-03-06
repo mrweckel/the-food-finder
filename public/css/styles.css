@@ -459,4 +459,8 @@ section.success {
     font-size: 120%;
   }
 
+  .navbar-fixed-top .navbar-brand {
+    font-size: 1em;
+  }
+
 }
