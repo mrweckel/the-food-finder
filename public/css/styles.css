@@ -450,3 +450,14 @@ section.success {
   background: url("../img/p1.png");
   height: 100vh;
 }
+
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+  header .intro-text#intro-id .skills {
+    font-size: 120%;
+  }
+
+}
