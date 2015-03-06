@@ -5,6 +5,10 @@ html, body {
     padding: 0px;
     background: #1fa4b6;
 }
+.img-responsive.main-img{
+  max-width: 40%;
+}
+
 #map-canvas {
     height: 50%;
     width: 50%;
@@ -124,7 +128,7 @@ form.signin input::-webkit-input-placeholder {
   position: relative;
   top: 10px;
   left: 50%;
-  transform: translate(-37%,0);
+  transform: translate(-42.5%,0);
   margin-bottom: 20px;
 }
 
@@ -178,7 +182,7 @@ form.signin input::-webkit-input-placeholder {
   position: relative;
   left: 50%;
   margin-top: 30px;
-  transform: translate(-37%,0);
+  transform: translate(-42.5%,0);
 }
 
 .rest-profiles {
@@ -190,7 +194,7 @@ form.signin input::-webkit-input-placeholder {
     margin: 0px 50px 20px 0;
     background: #fff;
     height: 200px;
-    width: 200px;
+    width: 22.5%;
 }
 
 .rest-profiles img{
