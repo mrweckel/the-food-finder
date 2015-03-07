@@ -1,11 +1,27 @@
 <h3>Leave Rating</h3>
 <div align='top'>
   <form action='/rating' method='POST'>
-    <input type='radio' name="rate" value=1>*<br>
-    <input type='radio' name="rate" value=2>**<br>
-    <input type='radio' name="rate" value=3>***<br>
-    <input type='radio' name="rate" value=4>****<br>
-    <input type='radio' name="rate" value=5>*****<br>
-    <input type='submit'>
+    <ul class="list-unstyled">
+      <li>
+        <input type='radio' name="rate" value=1>1
+      </li>
+
+      <li>
+        <input type='radio' name="rate" value=2>2
+      </li>
+
+      <li>
+        <input type='radio' name="rate" value=3>3
+      </li>
+
+      <li>
+        <input type='radio' name="rate" value=4>4
+      </li>
+
+      <li>
+        <input type='radio' name="rate" value=5>5
+      </li>
+    <button class="btn btn-success" type='submit'>Submit</button>
+  </ul>
   </form>
 </div>

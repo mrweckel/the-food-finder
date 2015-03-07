@@ -7,6 +7,9 @@ gem 'pg'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-assetpack'
+
+
 
 # Use Thin for our web server
 gem 'thin'
@@ -21,8 +24,12 @@ gem 'bcrypt'
 gem 'pry'
 gem 'yelp'
 gem 'gravatar-ultimate'
+gem 'rspec'
+
+#Sass
+gem 'sass'
+gem 'bootstrap-sass'
 
 group :test do
   gem 'faker'
-  gem 'rspec'
 end

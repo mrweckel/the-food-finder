@@ -1,34 +1,21 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="page-container rest">
+  <div id="map-canvas"></div>
 
-<!-- <div class="rest-container"> -->
-  <div class="restaurant-header">
+  <div class="restaurant-header well">
+
     <img src='<%= @restaurant.picture %>' width="145em" height="145em" class="rest-img">
+
     <div>
       <h1 class="restaurant-name"><%= @restaurant.name %></h1>
       <p class="rest-rating">Rating: <%= average_rating(@restaurant)%></p>
     </div>
-  </div>
-
-    <br>
-
-  <div id="map-canvas"></div>
-
-    <br>
-    <br>
 
   <form action='/comments/new' method="post" class="comment-form">
     <input type="hidden" name="comment[restaurant_id]" value="<%= @restaurant.id%>">
     <input type="hidden" name="comment[user_id]" value="<%= session[:user_id]%>">
     <textarea name="comment[text]" placeholder="enter comment"></textarea><br>
-    <input type="submit" value="leave comment">
+    <button class="btn btn-success"type="submit" value="leave comment">Submit</button>
   </form>
-
-    <br>
 
   <div id="comments">
     <p>
@@ -37,21 +24,21 @@
       <span class="comment-author"></br>
         <%=comment.created_at.strftime("%b %d, %Y") %> | commented by:
         <a href="/profile/<%= session[:user_id]%>"><%= comment.user.name%></a>
-      </span><br>
+      </span>
     <% end %>
     </p>
   </div>
 
-  <br>
   <%= erb :_ratings %>
-  <br>
 
   <div id="previous_diners">
     People who have eaten here before:
-    <ol>
+    <ul class="list-unstyled list-inline">
       <% customer_names = @restaurant.customers.uniq %>
         <% customer_names.each do |cust| %>
-          <li><a href="/profile/<%= cust.id%>"><%= cust.name %></a></li>
+          <li><a href="/profile/<%= cust.id%>"><img src = "<%=Gravatar.new(cust.email).image_url%>"></a></li>
         <% end %>
-    </ol>
+    </ul>
   </div>
+
+</div>

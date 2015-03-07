@@ -1,18 +1,12 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="col-md-2"></div>
-
-<div class="col-md-8" id="restaurants">
-  <% @restaurants.each do |rest| %>
-  	<div class ="profiles">
-    	<img src = "<%=rest.picture%>"><br>
-    	<a href="/restaurant/<%= rest.id%>"><%= rest.name %></a><br>
-  	</div>
-  <% end %>
+<div id="rest-container" class="page-container prof col-md-8 col-md-offset-2">
+  <ul>
+    <% @restaurants.each do |rest| %>
+    	<li class ="rest-profiles list-unstyled list-inline">
+      	<img src = "<%=rest.picture%>">
+      	<a href="/restaurant/<%= rest.id%>"><%= rest.name %></a>
+    	</li>
+    <% end %>
+  </ul>
 </div>
 
 <div class="col-md-2"></div>
