@@ -85,19 +85,17 @@ form.signin .textbox input {
     border-top: 1px solid #000;
     color: #000;
     @include border-sizing(3px);
-    // border-radius: 3px 3px 3px 3px;
-    // -moz-border-radius: 3px;
-    // -webkit-border-radius: 3px;
     padding: 6px 6px 4px;
 }
+
 form.signin input:-moz-placeholder {
     color: #18bc9c;
-    /*text-shadow: 0 0 2px #000;*/
 }
+
 form.signin input::-webkit-input-placeholder {
     color: #18bc9c;
-    /*text-shadow: 0 0 2px #000;*/
 }
+
 .button {
     @include border-sizing(4px);
     color: #333;
@@ -140,10 +138,6 @@ form.signin input::-webkit-input-placeholder {
   transform: translate(-42.5%,0);
   margin-bottom: 20px;
 }
-
-/*ul li.profiles:nth-child(3n){
-    padding:0;
-}*/
 
 .profiles img{
   border: 2px black solid;
