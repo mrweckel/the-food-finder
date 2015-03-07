@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    // map //
     var map;
     var infowindow;
 
     function initialize() {
       var dbc = new google.maps.LatLng(40.706426, -74.009007);
       var dest = $('h1').html();
-      // var dest = 'Mad Dog'
       var mapOptions = {
         zoom: 15,
         center: dbc
@@ -84,15 +82,6 @@ $(document).ready(function() {
 
     return false;
     });
-
-    // When clicking on the button close or the mask layer the popup closed
-  //   $('a.close, #mask').live('click', function() {
-  //     $('#mask , .login-popup').fadeOut(300 , function() {
-  //       $('#mask').remove();
-  //   });
-  //   return false;
-  // });
-  //login//
 
   //signup//
   $('a.signup-window').click(function() {
