@@ -1,0 +1,97 @@
+#restaurants {
+    margin-top: 20px;
+    width: 200px;
+}
+
+.rest-list{
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.rest-list li{
+  margin-left: 12.5%;
+}
+
+#rest-container{
+  margin-top: 120px;
+  border: 4px $secondary solid;
+}
+
+#rest-container ul{
+  position: relative;
+  left: 50%;
+  margin-top: 30px;
+  transform: translate(-42.5%,0);
+}
+
+.rest-profiles {
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    float: left;
+    border: 1px black solid;
+    margin: 0px 50px 20px 0;
+    background: #fff;
+    height: 200px;
+    width: 22.5%;
+}
+
+.rest-profiles img{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+.rest-profiles a{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 150px;
+  text-align: center;
+}
+
+
+.restaurant-header.well{
+  border: 2px black solid;
+  border-radius: 5px;
+  margin-top: 25px;
+  background: #fff;
+  width: 50%;
+  margin: 25px auto;
+}
+
+.restaurant-header img{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 2px black solid;
+  border-radius: 50%;
+}
+
+.restaurant-header h1, p, form, h3{
+  text-align: center;
+}
+
+.restaurant-header form button{
+  margin-top: 10px;
+  width: 150px;
+}
+
+#previous_diners{
+  text-align: center;
+  margin-top: 35px;
+}
+
+#previous_diners ul.list-unstyled.list-inline li{
+  margin-top: 20px;
+}
+
+.page-container.rest{
+  background: url("../img/sos.png");
+  border: 4px $secondary solid;
+  margin: 120px 100px;
+}

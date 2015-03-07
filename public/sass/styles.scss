@@ -1,10 +1,20 @@
+$main_color: #1fa4b6;
+
+@mixin border-sizing($x) {
+  border-radius: $x $x $x $x;
+  -moz-border-radius: $x;
+  -webkit-border-radius: $x;
+}
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0px;
     padding: 0px;
-    background: #1fa4b6;
+    backg
+    round: $main_color;
 }
+
 .img-responsive.main-img{
   max-width: 40%;
 }
@@ -14,7 +24,7 @@ html, body {
     width: 50%;
     margin: 0 auto;
     border: 0.5em solid #1ABC9C;
-}
+
 }
 #mask {
     display: none;
@@ -33,7 +43,7 @@ html, body {
     background: #fff;
     padding: 10px;
     border: 2px solid #ddd;
-    border-radius: 10px;
+    @include border-sizing(10px);
     float: left;
     font-size: 1.2em;
     position: fixed;
@@ -44,29 +54,32 @@ html, body {
 }
 
 img.btn_close {
-    /*Position the close button */
-
-    float: right;
-    margin: -28px -28px 0 0;
-    height: 50%;
-    width: 50%;
+  float: right;
+  margin: -28px -28px 0 0;
+  height: 50%;
+  width: 50%;
 }
+
 fieldset {
     border: none;
     width: 98%;
 }
+
 form.signin .textbox label {
     display: block;
     padding-bottom: 7px;
 }
+
 form.signin .textbox span {
     display: block;
 }
+
 form.signin p, form.signin span {
     color: #999;
     font-size: 11px;
     line-height: 18px;
 }
+
 form.signin .textbox input {
     background: #fff;
     border-bottom: 1px solid #333;
@@ -74,9 +87,10 @@ form.signin .textbox input {
     border-right: 1px solid #333;
     border-top: 1px solid #000;
     color: #000;
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    @include border-sizing(3px);
+    // border-radius: 3px 3px 3px 3px;
+    // -moz-border-radius: 3px;
+    // -webkit-border-radius: 3px;
     padding: 6px 6px 4px;
 }
 form.signin input:-moz-placeholder {
@@ -88,9 +102,7 @@ form.signin input::-webkit-input-placeholder {
     /*text-shadow: 0 0 2px #000;*/
 }
 .button {
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    @include border-sizing(4px);
     color: #333;
     cursor: pointer;
     display: inline-block;

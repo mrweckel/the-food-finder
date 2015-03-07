@@ -1,0 +1,14 @@
+$main_color: #1fa4b6;
+$secondary:  #EE745A;
+
+@mixin border-sizing($x) {
+  border-radius: $x $x $x $x;
+  -moz-border-radius: $x;
+  -webkit-border-radius: $x;
+}
+
+@mixin trans($type, $time){
+  -webkit-transition: $type $time;
+  -moz-transition: $type $time;
+  transition: $type $time;
+}
