@@ -1,0 +1,52 @@
+.profiles {
+    padding: 10px;
+    position: relative;
+    float: left;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: 0px 50px 20px 0;
+    background: #fff;
+}
+
+#profile-list{
+  text-align: center;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-42.5%,0);
+  margin-bottom: 20px;
+}
+
+.profiles img{
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+.single-profile{
+  background: #fff;
+  margin-top: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.single-profile img{
+  position: relative;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 2px black solid;
+  border-radius: 50%;
+  width: 150px;
+}
+
+.single-profile h1{
+  text-align: center;
+  padding: 20px;
+}
+
+.page-container.prof{
+  background: url("../img/sos.png");
+  border: 4px $secondary solid;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}

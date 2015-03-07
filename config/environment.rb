@@ -45,7 +45,7 @@ require 'bootstrap-sass'
     css :application, [
       '/css/normalize.css',
       '/css/bootstrap.min.css',
-      '/stylesheets/styles.css'
+      '/stylesheets/application.css'
      ]
 
     css_compression :sass

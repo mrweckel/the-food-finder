@@ -1,0 +1,221 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: $main_color;
+}
+
+.img-responsive.main-img{
+  max-width: 40%;
+}
+
+#map-canvas {
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+    border: 0.5em solid #1ABC9C;
+
+}
+
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 9999;
+}
+
+.login-popup, .signup-popup {
+
+  @include border-sizing(10px);
+
+  display: none;
+  background: #fff;
+  padding: 10px;
+  border: 2px solid #ddd;
+  float: left;
+  font-size: 1.2em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  font-color: #000;
+}
+
+img.btn_close {
+  float: right;
+  margin: -28px -28px 0 0;
+  height: 50%;
+  width: 50%;
+}
+
+fieldset {
+    border: none;
+    width: 98%;
+}
+
+.button {
+    @include border-sizing(4px);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 10px;
+    font: 1.2em;
+    width: 214px;
+}
+.button:hover {
+    background: #ddd;
+}
+
+#profile-container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+a.prof-link{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.user-buttons {
+    font-size: 1.5em
+}
+#intro-id {
+    margin-top: -30px;
+}
+
+body {
+    overflow-x: hidden;
+}
+p {
+    font-size: 20px;
+}
+p.small {
+    font-size: 16px;
+}
+a, a:hover, a:focus, a:active, a.active {
+    outline: 0;
+    color: #18bc9c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+hr.star-light, hr.star-primary {
+    margin: 50px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background: #1fa4b6;
+}
+
+header .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .row{
+  margin: -100px -15px 100px -15px;
+}
+
+header .row a {
+  color: white;
+}
+
+.user-buttons.btn.btn-success {
+  width:200px;
+  margin: 20px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
+}
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+header .intro-text .name {
+    font-size: 4.75em;
+}
+header .intro-text .skills {
+    font-size: 1.75em;
+}
+
+section {
+    padding: 100px 0;
+}
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+section.success {
+    color: #fff;
+    background: #18bc9c;
+}
+
+
+
+
+
+
+#map-canvas{
+  margin: 0 auto;
+  border: 0.5em solid #1ABC9C;
+  width: 90%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.custom-sidebar{
+  background: url("../img/p1.png");
+  height: 100vh;
+}
+
+
+@media screen and (max-device-width: 375px) and (max-device-height: 667px)
+{
+
+  header .intro-text .skills {
+    font-size: 120%;
+  }
+
+  .navbar-fixed-top .navbar-brand {
+    font-size: 1em;
+  }
+
+}
